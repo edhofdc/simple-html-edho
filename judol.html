@@ -34,11 +34,35 @@
             font-size: 18px;
             color: red;
         }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        @media (min-width: 768px) {
+            .content {
+                flex-direction: row;
+            }
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #ff0000;
+        }
+        .login-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 2px solid #ffd700;
+            padding-left: 20px;
+        }
         .login-form {
             background: #333;
             padding: 20px;
             width: 300px;
-            margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 0 10px #ff0000;
             text-align: left;
@@ -63,15 +87,6 @@
         .login-form button:hover {
             background: #cc0000;
         }
-        .image-container {
-            margin: 20px auto;
-        }
-        .image-container img {
-            width: 50%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px #ff0000;
-        }
     </style>
 </head>
 <body>
@@ -81,17 +96,20 @@
         <p>Mainkan game slot terbaik dan raih jackpot fantastis setiap hari!</p>
         <p class="warning">⚠️ PERINGATAN: Berjudi dapat menyebabkan kecanduan. Harap bermain dengan bijak dan bertanggung jawab.</p>
         
-        <div class="image-container">
-            <img src="https://images.theconversation.com/files/548755/original/file-20230918-19-pgrmdt.jpg" alt="HOKI888 Banner">
-        </div>
-        
-        <div class="login-form">
-            <h3>Login</h3>
-            <form>
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">Masuk</button>
-            </form>
+        <div class="content">
+            <div class="image-container">
+                <img src="https://images.theconversation.com/files/548755/original/file-20230918-19-pgrmdt.jpg" alt="HOKI888 Banner">
+            </div>
+            <div class="login-container">
+                <div class="login-form">
+                    <h3>Login</h3>
+                    <form>
+                        <input type="text" placeholder="Username" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit">Masuk</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </body>
