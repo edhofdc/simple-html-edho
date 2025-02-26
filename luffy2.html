@@ -11,44 +11,47 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
+        /* HEADER */
         header {
             background-color: #003366;
             color: white;
-            padding: 10px 0;
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
         }
-        .container {
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
-        }
+
         #branding {
-            float: left;
             display: flex;
             align-items: center;
         }
-        #branding span {
-            font-size: 20px;
-             font-weight: bold;
-        }
+
         #branding img {
             height: 50px;
             margin-right: 10px;
         }
+
+        #branding span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
         nav {
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
             gap: 20px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
+            padding: 10px 12px;
         }
 
-        
+        /* WELCOME MESSAGE */
         .welcome {
             text-align: center;
             font-size: 20px;
@@ -57,21 +60,28 @@
             font-weight: bold;
             color: green;
         }
+
+        /* HERO SECTION */
         .hero {
             background: url('https://bimbinganislam.com/wp-content/uploads/2020/07/Hukum-Salaman-Dengan-Non-Muslim-atau-Orang-Kafir-bimbingan-islam-1.jpg') no-repeat center center/cover;
             height: 300px;
         }
+
+        /* CONTENT SECTION */
         .content {
             padding: 20px 0;
         }
+
         .content h2 {
             color: #003366;
         }
+
         .cards {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
+
         .card {
             background: white;
             width: 30%;
@@ -80,20 +90,25 @@
             border-radius: 5px;
             overflow: hidden;
         }
+
         .card img {
             width: 100%;
             height: 150px;
             object-fit: cover;
         }
+
         .card h3 {
             padding: 10px;
             background: #003366;
             color: white;
             margin: 0;
         }
+
         .card p {
             padding: 10px;
         }
+
+        /* FOOTER */
         footer {
             background-color: #003366;
             color: white;
@@ -101,23 +116,41 @@
             padding: 10px 0;
             margin-top: 20px;
         }
+
         .contact {
             text-align: right;
             padding: 10px;
         }
+
         .contact img {
             height: 30px;
             margin-left: 5px;
         }
+
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
-            nav {
-                float: none;
-                text-align: center;
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 5%;
             }
+
+            #branding {
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
             .cards {
                 flex-direction: column;
                 align-items: center;
             }
+
             .card {
                 width: 90%;
             }
@@ -126,19 +159,17 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div id="branding">
-                <img src="https://raw.githubusercontent.com/edhofdc/simple-html-edho/refs/heads/main/Designer.png" alt="Logo One Piece">
-                <span>Dinas Bajak Laut Provinsi Grand Line</span>
-            </div>
-            <nav>
-                <a href="#">Beranda</a>
-                <a href="#">Profil</a>
-                <a href="#">Layanan</a>
-                <a href="#">Publikasi</a>
-                <a href="#">Kontak</a>
-            </nav>
+        <div id="branding">
+            <img src="https://raw.githubusercontent.com/edhofdc/simple-html-edho/refs/heads/main/Designer.png" alt="Logo One Piece">
+            <span>Dinas Bajak Laut Provinsi Grand Line</span>
         </div>
+        <nav>
+            <a href="#">Beranda</a>
+            <a href="#">Profil</a>
+            <a href="#">Layanan</a>
+            <a href="#">Publikasi</a>
+            <a href="#">Kontak</a>
+        </nav>
     </header>
 
     <div class="welcome">Selamat datang di website Dinas Bajak Laut Provinsi Grand Line</div>
@@ -155,7 +186,7 @@
             </div>
             <div class="card">
                 <img src="https://www.armytimes.com/resizer/v2/JZAGWVY555A7LKAJA3L2P3MUUQ.jpg?auth=f6e335b6c4e78bce6e15ab3ffdc51688ba808200001ea30d52ad127715bbafeb&width=1024&height=682" alt="Berita 2">
-                <h3>Strategi Baru Angkatan Laut</h3>
+                <h3>Strategi Baru Bajak Laut</h3>
                 <p>Fleet Admiral Akainu merancang kebijakan baru untuk memperketat pengawasan di Grand Line, khususnya di wilayah yang didominasi oleh Bajak Laut Topi Jerami.</p>
             </div>
             <div class="card">
@@ -165,7 +196,6 @@
             </div>
         </div>
     </div>
-    
 
     <footer>
         <div class="container">
